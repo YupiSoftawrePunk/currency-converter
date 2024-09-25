@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float sum, dollar = 92.8, euro = 103.4, pound = 123.4, swiss_franc = 108.6, czech_crown = 4.11;
+    int choice;
+    float comission = 0.05, sum_to_convert;
+    
+    
+    while (true)
+    {
+        cout<<"Введите сумму, чтобы завершить введите 0: ";
+        cin>>sum;
+        if (sum == 0)
+        {
+            break;
+        }
+        
+        cout<<"Выберите валюту для размена"<<endl;
+        cout<<"1. dollar = "<<dollar<<"\t2. euro = "<<euro<<"\t3. pound = "<<pound<<
+        "\t4. swiss frank = "<<swiss_franc<<"\t5. czech crown = "<<czech_crown<<endl;
+        cin>>choice;
+        
+        
+        if (choice == 1)
+        {
+            cout<<"В данном случае комиссия будет: "<<sum * comission<<endl;
+            sum_to_convert += sum - (sum * comission);
+            cout<<"Вы получите: "<<sum_to_convert / dollar<<" dollars"<<endl;
+        }
+        
+        
+        else if (choice == 2)
+        {
+            cout<<"В данном случае комиссия будет: "<<sum * comission<<endl;
+            sum_to_convert += sum - (sum * comission);
+            cout<<"Вы получите: "<<sum_to_convert / euro<<" euros"<<endl;
+        }
+        
+        
+        else if (choice == 3)
+        {
+            cout<<"В данном случае комиссия будет: "<<sum * comission<<endl;
+            sum_to_convert += sum - (sum * comission);
+            cout<<"Вы получите: "<<sum_to_convert / pound<<" pounds"<<endl;
+        }
+        
+        
+        else if (choice == 4)
+        {
+            cout<<"В данном случае комиссия будет: "<<sum * comission<<endl;
+            sum_to_convert += sum - (sum * comission);
+            cout<<"Вы получите: "<<sum_to_convert / swiss_franc<<" swiss francs"<<endl;
+        }
+        
+        
+        else if (choice == 5)
+        {
+            cout<<"В данном случае комиссия будет: "<<sum * comission<<endl;
+            sum_to_convert += sum - (sum * comission);
+            cout<<"Вы получите: "<<sum_to_convert / czech_crown<<" czech crowns"<<endl;
+        }
+    }
+
+
+    return 0;
+}
